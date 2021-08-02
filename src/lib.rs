@@ -14,9 +14,9 @@ mod tests {
     println!("Array: {:?}", array);
     let indexes = [5, 10, 15];
     println!("Indexes: {:?}", indexes);
-    let split = array.split_at_indexes_unchecked(indexes).collect::<Vec<_>>();
+    let split = array.split_at_indexes_unchecked(&indexes).collect::<Vec<_>>();
     println!("Split: {:?}", split);
-    let split_inclusive = array.split_at_indexes_inclusive_unchecked(indexes).collect::<Vec<_>>();
+    let split_inclusive = array.split_at_indexes_inclusive_unchecked(&indexes).collect::<Vec<_>>();
     println!("Split Inclusive: {:?}", split_inclusive);
 
   }

@@ -50,7 +50,7 @@ pub fn criterion_benchmark(c: &mut Criterion) {
     BenchmarkId::new("Split At Indexes [Clone]", format!("{}", elements)), &input,
     |b, (arr, indexes)| {
       b.iter(move || {
-        arr.split_at_indexes_unchecked(indexes.clone()).for_each(drop)
+        arr.split_at_indexes_unchecked(indexes).for_each(drop)
       })
     },
   );
